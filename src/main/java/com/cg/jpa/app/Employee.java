@@ -2,20 +2,26 @@ package com.cg.jpa.app;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name = "cg_emp")
-public class Employee {
+// explain PK FK and cardinality of entities here 
 
-	@Id
+@Entity
+@Table(name = "cg_emp_3")
+public class Employee { // entity classes
+
+	@Id // primary key
 	@Column(name = "employee_id")
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
-	@Column(name = "employee_name", length = 128, nullable = false)
+	@Column(name = "employee_name", length = 10, nullable = false)
 	private String name;
 
 	@Column
+//	@Column(name = "employe_salary")
 	private double salary;
+
+//	@OneToMany(targetEntity = Department.class)
+//	private Department department;
 
 	public Employee(int id, String name, double salary) {
 		super();
