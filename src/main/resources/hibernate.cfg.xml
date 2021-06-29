@@ -16,8 +16,10 @@
 		<!-- <property name="hibernate.show_sql">true</property> <property name="hibernate.format_sql">true</property> -->
 		<mapping class="com.cg.jpa.app.Employee"></mapping>
 		<mapping class="com.cg.jpa.app.Department"></mapping>
-		
-		<!--  Add more properties here   -->
+		<mapping class="com.cg.jpa.app.demo.Employee"></mapping>
+		<mapping class="com.cg.jpa.app.demo.Department"></mapping>
+
+		<!-- Add more properties here -->
 	</session-factory>
 </hibernate-configuration>
 

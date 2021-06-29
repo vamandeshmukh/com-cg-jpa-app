@@ -5,20 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.GeneratorType;
-
 @Entity
-@Table(name = "my_dept")
+@Table(name = "dep_table")
 public class Department {
 
 	@Id
-//	@GeneratedValue(strategy = GenerationType.AUTO)
-//	@GeneratedValue(strategy = GenerationType.SEQUENCE)
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "dept_seq_generator")
-	@SequenceGenerator(name = "dept_seq_generator", sequenceName = "dept_seq")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int did;
 	@Column
 	private String dname;
