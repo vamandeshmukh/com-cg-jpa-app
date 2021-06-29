@@ -1,10 +1,13 @@
 package com.cg.jpa.app.demo;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -18,6 +21,9 @@ public class Department {
 	private String dname;
 	@Column
 	private String city;
+
+	@OneToMany(mappedBy = "department")
+	private List<Employee> employees;
 
 	public Department() {
 		super();

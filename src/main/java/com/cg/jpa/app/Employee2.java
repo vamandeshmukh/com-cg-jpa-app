@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "cg_emp_3")
-public class Employee { // entity classes
+public class Employee2 { // entity classes
 
 	@Id // primary key
 	@Column(name = "employee_id")
@@ -23,20 +23,20 @@ public class Employee { // entity classes
 //	@OneToMany(targetEntity = Department.class)
 //	private Department department;
 
-	public Employee(int id, String name, double salary) {
+	public Employee2(int id, String name, double salary) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.salary = salary;
 	}
 
-	public Employee(String name, double salary) {
+	public Employee2(String name, double salary) {
 		super();
 		this.name = name;
 		this.salary = salary;
 	}
 
-	public Employee() {
+	public Employee2() {
 		super();
 	}
 

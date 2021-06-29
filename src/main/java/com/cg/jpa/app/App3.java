@@ -21,11 +21,11 @@ public class App3 {
 
 		Transaction transaction = session.beginTransaction();
 
-		Department dep1 = new Department("Admin", "Pune");
+		Department2 dep1 = new Department2("Admin", "Pune");
 
 		session.save(dep1); // insert
 
-		Department dep5 = session.get(Department.class, dep1.getDid());
+		Department2 dep5 = session.get(Department2.class, dep1.getDid());
 		System.out.println(dep1.toString());
 
 //		Department dep3;

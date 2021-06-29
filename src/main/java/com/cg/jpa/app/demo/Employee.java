@@ -19,7 +19,10 @@ public class Employee { // entity classes
 	@Column
 	private double salary;
 
-	@OneToMany(targetEntity = Department.class)
+//	@OneToMany(targetEntity = Department.class)
+
+	@ManyToOne
+	@JoinColumn(name = "did")
 	private Department department;
 
 	public Employee() {

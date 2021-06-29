@@ -22,15 +22,15 @@ public class App {
 
 			Transaction transaction = session.beginTransaction();
 
-			Employee emp = new Employee("Sonu", 10.5);
+			Employee2 emp = new Employee2("Sonu", 10.5);
 
 			session.save(emp); // insert
 
 			transaction.commit();
 
-			Employee e1;
+			Employee2 e1;
 
-			e1 = session.get(Employee.class, 15); // select
+			e1 = session.get(Employee2.class, 15); // select
 
 			System.out.println(e1.toString());
 			session.evict(e1);

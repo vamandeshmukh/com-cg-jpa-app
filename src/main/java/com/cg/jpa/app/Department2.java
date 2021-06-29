@@ -12,7 +12,7 @@ import org.hibernate.annotations.GeneratorType;
 
 @Entity
 @Table(name = "my_dept")
-public class Department {
+public class Department2 {
 
 	@Id
 //	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,17 +25,17 @@ public class Department {
 	@Column
 	private String city;
 
-	public Department() {
+	public Department2() {
 		super();
 	}
 
-	public Department(String dname, String city) {
+	public Department2(String dname, String city) {
 		super();
 		this.dname = dname;
 		this.city = city;
 	}
 
-	public Department(int did, String dname, String city) {
+	public Department2(int did, String dname, String city) {
 		super();
 		this.did = did;
 		this.dname = dname;
