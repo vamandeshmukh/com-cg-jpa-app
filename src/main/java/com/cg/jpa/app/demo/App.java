@@ -19,8 +19,11 @@ public class App {
 		Transaction transaction = session.beginTransaction();
 
 		Department dep1 = new Department("HR", "Hyderabad");
+		session.save(dep1);
+
 		Employee emp1 = new Employee("Sonu", 10.5, dep1);
-		
+		session.save(emp1);
+
 		System.out.println(session.get(Employee.class, emp1.getEid()).toString());
 
 		transaction.commit();
