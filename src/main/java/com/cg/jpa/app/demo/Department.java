@@ -1,4 +1,4 @@
-package com.cg.jpa.app;
+package com.cg.jpa.app.demo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
