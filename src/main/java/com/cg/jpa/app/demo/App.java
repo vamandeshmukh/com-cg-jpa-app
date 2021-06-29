@@ -18,8 +18,10 @@ public class App {
 		Session session = factory.openSession();
 		Transaction transaction = session.beginTransaction();
 
-//		Department dep1 = new Department("HR", "Hyderabad");
-//		Employee emp1 = new Employee("Sonu", 10.5, dep1);
+		Department dep1 = new Department("HR", "Hyderabad");
+		Employee emp1 = new Employee("Sonu", 10.5, dep1);
+		
+		System.out.println(session.get(Employee.class, emp1.getEid()).toString());
 
 		transaction.commit();
 		session.close();
